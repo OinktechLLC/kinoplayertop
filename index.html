@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-<meta name="description" content="KinoBox.tv — Смотрите фильмы и сериалы бесплатно онлайн. Быстрый плеер нового поколения.">
+<meta name="description" content="Kinoplayer.top — Смотрите фильмы и сериалы бесплатно онлайн. Быстрый плеер нового поколения.">
 <meta name="keywords" content="кино онлайн, сериалы онлайн, фильмы бесплатно, kinobox">
-<meta property="og:title" content="KinoBox.tv — Кино и сериалы онлайн">
+<meta property="og:title" content="Kinoplayer.top — Кино и сериалы онлайн">
 <meta property="og:description" content="Быстрый плеер для фильмов и сериалов. Без регистрации.">
 <meta property="og:type" content="website">
-<title>KinoBox.tv — Кино и сериалы онлайн</title>
+<title>Kinoplayer.top — Кино и сериалы онлайн</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
    <!-- Верхний рекламный блок -->
@@ -206,7 +206,7 @@ hr{border:none;border-top:1px solid var(--border);margin:22px 0}
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="#/" class="nav-logo">🎬 KinoBox</a>
+  <a href="#/" class="nav-logo">🎬 KinoPlayerTop</a>
   <a href="#/player" data-p="player">▶ Плеер</a>
   <a href="#/faq"    data-p="faq">❓ FAQ</a>
   <a href="#/embed"  data-p="embed">🔌 Embed</a>
@@ -220,7 +220,7 @@ hr{border:none;border-top:1px solid var(--border);margin:22px 0}
 <!-- ===== PLAYER ===== -->
 <div id="p-player" class="page">
   <div class="ph">
-    <h2 id="playerTitle">🎥 KinoBox Плеер</h2>
+    <h2 id="playerTitle">🎥 KinoPlayerTop Плеер</h2>
     <div class="badge" id="kpBadge">ID: —</div>
   </div>
   <div id="playerBox"></div>
@@ -324,60 +324,7 @@ hr{border:none;border-top:1px solid var(--border);margin:22px 0}
     </div>
   </div>
 
-  <h2>📋 Параметры kinobox()</h2>
-  <table>
-    <thead><tr><th>Параметр</th><th>Тип</th><th>Описание</th></tr></thead>
-    <tbody>
-      <tr><td><code>selector</code></td><td>string</td><td>CSS-селектор контейнера плеера</td></tr>
-      <tr><td><code>search.kinopoisk</code></td><td>number</td><td>ID фильма/сериала на Кинопоиске</td></tr>
-      <tr><td><code>search.imdb</code></td><td>string</td><td>IMDB ID (например <code>tt0111161</code>)</td></tr>
-      <tr><td><code>search.title</code></td><td>string</td><td>Название для поиска</td></tr>
-      <tr><td><code>search.year</code></td><td>number</td><td>Год (для уточнения поиска)</td></tr>
-    </tbody>
-  </table>
 
-  <h2>🌐 Поддерживаемые источники</h2>
-  <p>Collaps, Alloha, HDVB, VideoCDN, Kodik, Bazon, Ashdi и SmotrimFlims — плеер перебирает их автоматически.</p>
-</div>
-
-<!-- ===== DOCS ===== -->
-<div id="p-docs" class="page">
-  <h1>Документация KinoBox</h1>
-
-  <h2>📌 Маршруты (Hash-роутинг)</h2>
-  <div class="codeblock">kinobox.tv/#/films/{id}    — фильм
-kinobox.tv/#/serials/{id}  — сериал
-kinobox.tv/embed/#{id}     — embed-плеер</div>
-
-  <h2>⚙️ Быстрая интеграция</h2>
-  <div class="codeblock">&lt;div id="myPlayer"&gt;&lt;/div&gt;
-&lt;script src="https://kinobox.tv/kinobox.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  kinobox('#myPlayer', { search: { kinopoisk: 301234 } });
-&lt;/script&gt;</div>
-
-  <h2>📦 Структура проекта</h2>
-  <div class="codeblock">kinobox/
-├── index.html     — главный SPA
-├── embed.html     — чистый embed-плеер
-├── kinobox.js     — библиотека плеера
-├── kinobox.css    — стили
-├── titlename.js   — получение названий
-├── vercel.json    — деплой Vercel
-├── _redirects     — деплой Netlify
-├── .htaccess      — Apache
-└── docs/</div>
-
-  <h2>🚀 Деплой</h2>
-  <p><strong>Vercel:</strong> достаточно подключить репозиторий — <code>vercel.json</code> уже настроен.</p>
-  <p><strong>Netlify:</strong> <code>_redirects</code> в корне обрабатывает все маршруты.</p>
-  <p><strong>Apache:</strong> <code>.htaccess</code> уже в репозитории.</p>
-  <p><strong>Локально:</strong></p>
-  <div class="codeblock">git clone https://github.com/twixoffltdco/kinoboxtv.git
-cd kinoboxtv
-python3 -m http.server 8080
-# → http://localhost:8080</div>
-</div>
 
 <!-- ===== TERMS ===== -->
 <div id="p-terms" class="page">
@@ -447,7 +394,7 @@ python3 -m http.server 8080
   ];
 
   function normalize(base){
-    return base.replace(/\/$/, "") + "/kinobox.js";
+    return base.replace(/\/$/, "") + "/kinoplayer.js";
   }
 
   function loadScript(url, onOk, onErr){
@@ -461,12 +408,12 @@ python3 -m http.server 8080
 
   function loadFrom(i){
     if(i >= proxies.length){
-      console.error("[KinoBox] Не удалось загрузить kinobox.js ни с одного прокси.");
+      console.error("[Kinoplayer] Не удалось загрузить ни с одного прокси.");
       return;
     }
     var src = normalize(proxies[i]);
     loadScript(src, function(){
-      console.info("[KinoBox] kinobox.js загружен:", src);
+      console.info("[Kinoplayer] загружен:", src);
     }, function(){
       loadFrom(i + 1);
     });
@@ -574,7 +521,7 @@ python3 -m http.server 8080
     var domain = window.location.origin;
     var scriptCode =
       '<div id="player"></div>\n\n'+
-      '<script src="'+domain+'/kinobox.js"><\/script>\n'+
+      '<script src="'+domain+'/kinoplayer.js"><\/script>\n'+
       '<script>\n'+
       '  kinobox(\'#player\', {\n'+
       '    search: { kinopoisk: '+kpId+' }\n'+

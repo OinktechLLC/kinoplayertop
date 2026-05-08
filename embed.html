@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KinoBox Player</title>
+<title>Kinoplayer.top Player</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;background:#000;overflow:hidden}
@@ -35,7 +35,7 @@ iframe{border:none!important}
   ];
 
   function normalize(base){
-    return base.replace(/\/$/, "") + "/kinobox.js";
+    return base.replace(/\/$/, "") + "/kinoplayer.js";
   }
 
   function loadScript(url, onOk, onErr){
@@ -54,7 +54,7 @@ iframe{border:none!important}
     }
     var src = normalize(proxies[i]);
     loadScript(src, function(){
-      console.info("[KinoBox] kinobox.js загружен:", src);
+      console.info("[Kinoplayer.top] загружен:", src);
     }, function(){
       loadFrom(i + 1);
     });

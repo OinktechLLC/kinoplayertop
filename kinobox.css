@@ -9,16 +9,16 @@
 
 
 :root {
-  --kb-glass-bg: rgba(5, 20, 15, 0.8);
-  --kb-glass-border: rgba(16, 185, 129, 0.2);
-  --kb-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --kb-glass-blur: blur(18px);
+  --kb-glass-bg: rgba(5, 25, 18, 0.85);
+  --kb-glass-border: rgba(16, 185, 129, 0.25);
+  --kb-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --kb-glass-blur: blur(20px);
   --kb-accent: #10b981;
   --kb-accent2: #34d399;
-  --kb-accent-glow: rgba(16, 185, 129, 0.5);
+  --kb-accent-glow: rgba(16, 185, 129, 0.6);
   --kb-text: #ffffff;
   --kb-text-dim: rgba(255, 255, 255, 0.85);
-  --kb-bg-deep: rgba(5, 20, 15, 0.9);
+  --kb-bg-deep: rgba(5, 25, 18, 0.95);
 }
 
 .kb__wrap {
@@ -38,9 +38,9 @@
   flex-wrap: wrap;
   gap: 6px;
   padding: 10px 12px;
-  background: rgba(10, 31, 23, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(10, 35, 26, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--kb-glass-border);
 }
 
@@ -51,7 +51,7 @@
   font-size: 11px;
   font-weight: 600;
   color: var(--kb-text-dim);
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(16, 185, 129, 0.12);
   border: 1px solid var(--kb-glass-border);
   transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
@@ -77,7 +77,7 @@
 }
 
 .kb__btn:hover { 
-  background: rgba(16, 185, 129, 0.25); 
+  background: rgba(16, 185, 129, 0.28); 
   color: #fff; 
   box-shadow: 0 4px 15px var(--kb-accent-glow);
 }

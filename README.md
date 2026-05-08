@@ -32,25 +32,6 @@
 
 ---
 
----
-
-## 📂 Структура проекта
-
-```
-kinoboxtv/
-├── index.html      — главный SPA (hash-роутинг)
-├── embed.html      — чистый embed-плеер
-├── kinobox.js      — библиотека плеера
-├── kinobox.css     — стили для внешнего подключения
-├── titlename.js    — получение названий по ID
-├── vercel.json     — настройки Vercel
-├── _redirects      — настройки Netlify
-├── .htaccess       — настройки Apache
-├── .gitignore
-└── README.md
-```
-
----
 
 ## 🌐 Поддерживаемые источники
 

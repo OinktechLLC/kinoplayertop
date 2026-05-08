@@ -7,16 +7,30 @@
 /* Стили инжектируются автоматически через kinobox.js.
    Этот файл нужен только если ты хочешь переопределить стили. */
 
+
+:root {
+  --kb-glass-bg: rgba(5, 20, 15, 0.8);
+  --kb-glass-border: rgba(16, 185, 129, 0.2);
+  --kb-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --kb-glass-blur: blur(18px);
+  --kb-accent: #10b981;
+  --kb-accent2: #34d399;
+  --kb-accent-glow: rgba(16, 185, 129, 0.5);
+  --kb-text: #ffffff;
+  --kb-text-dim: rgba(255, 255, 255, 0.85);
+  --kb-bg-deep: rgba(5, 20, 15, 0.9);
+}
+
 .kb__wrap {
   width: 100%;
   font-family: "Montserrat", "Segoe UI", sans-serif;
-  background: rgba(5, 20, 15, 0.8);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: var(--kb-glass-bg);
+  backdrop-filter: var(--kb-glass-blur);
+  -webkit-backdrop-filter: var(--kb-glass-blur);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--kb-glass-border);
+  box-shadow: var(--kb-glass-shadow), inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
 
 .kb__menu {
@@ -27,7 +41,7 @@
   background: rgba(10, 31, 23, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+  border-bottom: 1px solid var(--kb-glass-border);
 }
 
 .kb__btn {
@@ -36,9 +50,9 @@
   border-radius: 30px;
   font-size: 11px;
   font-weight: 600;
-  color: #86efac;
+  color: var(--kb-text-dim);
   background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid var(--kb-glass-border);
   transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
   backdrop-filter: blur(10px);
@@ -65,14 +79,14 @@
 .kb__btn:hover { 
   background: rgba(16, 185, 129, 0.25); 
   color: #fff; 
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 15px var(--kb-accent-glow);
 }
 
 .kb__btn.kb__active {
-  background: linear-gradient(135deg, #10b981, #34d399);
+  background: linear-gradient(135deg, var(--kb-accent), var(--kb-accent2));
   color: #fff;
-  border-color: #10b981;
-  box-shadow: 0 1px 8px rgba(16,185,129,.4), inset 0 0 15px rgba(255,255,255,0.2);
+  border-color: var(--kb-accent);
+  box-shadow: 0 1px 8px var(--kb-accent-glow), inset 0 0 15px rgba(255,255,255,0.2);
 }
 
 .kb__frame {

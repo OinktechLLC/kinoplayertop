@@ -316,9 +316,9 @@ hr{border:none;border-top:1px solid var(--border2);margin:22px 0}
 <div id="p-faq" class="page">
   <h1>Часто задаваемые вопросы</h1>
   <div class="fcard"><div class="fq">❓ Как найти ID фильма на Кинопоиске?</div><div class="fa">Откройте страницу фильма на kinopoisk.ru. В адресной строке будет ссылка вида <code>kinopoisk.ru/film/12345/</code> — число <strong>12345</strong> и есть ID.</div></div>
-  <div class="fcard"><div class="fq">❓ Как открыть фильм через KinoBox?</div><div class="fa">Введите в адресную строку: <code>kinobox.tv/#/films/ID</code> для фильма или <code>kinobox.tv/#/serials/ID</code> для сериала.</div></div>
+  <div class="fcard"><div class="fq">❓ Как открыть фильм через Kinoplayer?</div><div class="fa">Введите в адресную строку: <code>kinoplayer.top/#/films/ID</code> для фильма или <code>kinoplayer.top/#/serials/ID</code> для сериала.</div></div>
   <div class="fcard"><div class="fq">❓ Почему плеер не загружается?</div><div class="fa">Убедитесь что ID корректное число. Попробуйте: 1) сменить источник в меню плеера, 2) отключить блокировщик рекламы, 3) очистить кэш, 4) другой браузер.</div></div>
-  <div class="fcard"><div class="fq">❓ Нужна ли регистрация?</div><div class="fa">Нет. KinoBox полностью бесплатен, регистрация не требуется.</div></div>
+  <div class="fcard"><div class="fq">❓ Нужна ли регистрация?</div><div class="fa">Нет. Kinoplayer полностью бесплатен, регистрация не требуется.</div></div>
   <div class="fcard"><div class="fq">❓ Работает ли на телефоне?</div><div class="fa">Да, интерфейс полностью адаптивен. Работает на iOS Safari и Android Chrome.</div></div>
   <div class="fcard"><div class="fq">❓ Как смотреть сериал по сериям?</div><div class="fa">При открытии сериала в плеере появляется меню выбора сезона и серии.</div></div>
   <div class="fcard"><div class="fq">❓ Как встроить плеер на свой сайт?</div><div class="fa">Смотрите раздел <a href="#/embed">🔌 Embed</a> — там всё подробно описано с готовыми примерами кода.</div></div>
@@ -330,8 +330,8 @@ hr{border:none;border-top:1px solid var(--border2);margin:22px 0}
   <h1>Встроить плеер на сайт</h1>
 
   <div class="embed-hero">
-    <h2>🔌 KinoPlayerTop Embed</h2>
-    <p>Добавьте плеер KinoBox на любой сайт за 30 секунд. Три варианта интеграции — выбери удобный.</p>
+    <h2>🔌 KinoplayerTop Embed</h2>
+    <p>Добавьте плеер Kinoplayer на любой сайт за 30 секунд. Три варианта интеграции — выбери удобный.</p>
   </div>
 
   <!-- ГЕНЕРАТОР КОДА -->
@@ -354,7 +354,7 @@ hr{border:none;border-top:1px solid var(--border2);margin:22px 0}
       <div class="copy-wrap">
         <pre class="code" id="code-script">&lt;div id="player"&gt;&lt;/div&gt;
 
-&lt;script src="https://kinobox.tv/kinobox.js"&gt;&lt;/script&gt;
+&lt;script src="https://kinoplayer.top/kinobox.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   kinobox('#player', {
     search: { kinopoisk: 301 }
@@ -371,7 +371,7 @@ hr{border:none;border-top:1px solid var(--border2);margin:22px 0}
       <p>Проще некуда — работает даже в конструкторах сайтов.</p>
       <div class="copy-wrap">
         <pre class="code" id="code-iframe">&lt;iframe
-  src="https://kinobox.tv/embed/#301"
+  src="https://kinoplayer.top/embed/#301"
   width="100%"
   height="500"
   frameborder="0"
@@ -486,7 +486,7 @@ hr{border:none;border-top:1px solid var(--border2);margin:22px 0}
           playerInited = true;
           if(window.kinoboxTitleName) window.kinoboxTitleName.update(kpId);
         }catch(e){
-          console.error('[KinoBox]',e);
+          console.error('[Kinoplayer]',e);
           $box.html('<div style="padding:50px 20px;text-align:center;color:#fca5a5;font-size:13px">⚠️ Ошибка плеера. Обновите страницу.</div>');
         }
         return;

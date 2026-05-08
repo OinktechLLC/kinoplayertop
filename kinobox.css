@@ -1,7 +1,7 @@
 /*!
- * kinobox.css — KinoBox.tv
+ * kinobox.css — Kinoplayer.top
  * Подключи этот файл если используешь kinobox.js на своём сайте
- * Зеленая гамма - Жидкое Стекло (Glassmorphism)
+ * Зеленая гамма - Жидкое Стекло (Glassmorphism) - Production Ready
  */
 
 /* Стили инжектируются автоматически через kinobox.js.
@@ -9,16 +9,16 @@
 
 
 :root {
-  --kb-glass-bg: rgba(5, 25, 18, 0.85);
-  --kb-glass-border: rgba(16, 185, 129, 0.25);
-  --kb-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --kb-glass-bg: rgba(5, 20, 15, 0.90);
+  --kb-glass-border: rgba(16, 185, 129, 0.30);
+  --kb-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   --kb-glass-blur: blur(20px);
   --kb-accent: #10b981;
   --kb-accent2: #34d399;
-  --kb-accent-glow: rgba(16, 185, 129, 0.6);
+  --kb-accent-glow: rgba(16, 185, 129, 0.7);
   --kb-text: #ffffff;
-  --kb-text-dim: rgba(255, 255, 255, 0.85);
-  --kb-bg-deep: rgba(5, 25, 18, 0.95);
+  --kb-text-dim: rgba(255, 255, 255, 0.88);
+  --kb-bg-deep: rgba(5, 20, 15, 0.95);
 }
 
 .kb__wrap {

@@ -11,12 +11,6 @@
 <title>Kinoplayer.top — Кино и сериалы онлайн</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <!-- Верхний рекламный блок -->
-<div class="topAdPad">
-<div id="movie_video"></div>
-<script type="text/javascript" src="https://vak345.com/s.js?v=03208824bea369b060dba1f2083d6a4c
-" async></script>
-</div>
 <style>
 /* ===========================
    GLASSMORPHISM STYLE - Kinoplayer.top
@@ -541,6 +535,66 @@ function copyCode(id, btn){
     setTimeout(function(){btn.textContent='Копировать';btn.classList.remove('ok');},2000);
   });
 }
+
+/* ===========================
+   COOKIE & ANALYTICS
+=========================== */
+(function(){
+  function setCookie(name, value, days){
+    var expires = "";
+    if(days){
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+  }
+  function getCookie(name){
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++){
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if(c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  function generateId(){
+    return 'kp_' + Math.random().toString(36).substr(2,9) + '_' + Date.now().toString(36);
+  }
+  
+  // Инициализация пользователя
+  var userId = getCookie('kp_user_id');
+  if(!userId){
+    userId = generateId();
+    setCookie('kp_user_id', userId, 365);
+  }
+  
+  // Собираем данные о сессии
+  var sessionId = getCookie('kp_session_id');
+  if(!sessionId){
+    sessionId = generateId();
+    setCookie('kp_session_id', sessionId, 1);
+  }
+  
+  // Сохраняем первый визит
+  if(!getCookie('kp_first_visit')){
+    setCookie('kp_first_visit', new Date().toISOString(), 365);
+  }
+  
+  // Последний визит
+  setCookie('kp_last_visit', new Date().toISOString(), 30);
+  
+  // Предпочтения
+  var prefs = {
+    theme: getCookie('kp_theme') || 'dark',
+    lang: getCookie('kp_lang') || 'ru'
+  };
+  setCookie('kp_theme', prefs.theme, 365);
+  setCookie('kp_lang', prefs.lang, 365);
+  
+  console.log('[Kinoplayer] User initialized:', userId);
+})();
 </script>
 </body>
 </html>

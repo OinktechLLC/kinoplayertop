@@ -1,4 +1,4 @@
-# 🎬 KinoBox.tv
+# 🎬 kinoplayer.top
 
 > Плеер нового поколения для фильмов и сериалов. Быстро, бесплатно, без регистрации.
 
@@ -27,40 +27,10 @@
 Сайт использует **hash-роутинг** — он работает на любом хостинге без серверных настроек.
 
 ```
-kinobox.tv/#/films/301       — фильм Матрица
-kinobox.tv/#/serials/77321   — сериал
-kinobox.tv/#/faq             — FAQ
-kinobox.tv/#/embed           — страница встраивания
-kinobox.tv/embed/#301        — чистый embed-плеер
-```
 
 При обновлении страницы — всё работает корректно ✅
 
 ---
-
-## ⚙️ Встроить плеер на свой сайт
-
-### Способ 1: через kinobox.js
-
-```html
-<div id="player"></div>
-<script src="https://kinobox.tv/kinobox.js"></script>
-<script>
-  kinobox('#player', { search: { kinopoisk: 301 } });
-</script>
-```
-
-### Способ 2: через iframe
-
-```html
-<iframe
-  src="https://kinobox.tv/embed/#301"
-  width="100%"
-  height="500"
-  frameborder="0"
-  allowfullscreen
-></iframe>
-```
 
 ---
 

@@ -1,6 +1,7 @@
 /*!
  * kinobox.css — KinoBox.tv
  * Подключи этот файл если используешь kinobox.js на своём сайте
+ * Зеленая гамма - Жидкое Стекло
  */
 
 /* Стили инжектируются автоматически через kinobox.js.
@@ -9,10 +10,10 @@
 .kb__wrap {
   width: 100%;
   font-family: "Montserrat", "Segoe UI", sans-serif;
-  background: #080c18;
+  background: #05140f;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #1e2540;
+  border: 1px solid #1e4035;
 }
 
 .kb__menu {
@@ -20,8 +21,8 @@
   flex-wrap: wrap;
   gap: 6px;
   padding: 10px 12px;
-  background: #0b1020;
-  border-bottom: 1px solid #1e2540;
+  background: #0a1f17;
+  border-bottom: 1px solid #1e4035;
 }
 
 .kb__btn {
@@ -30,20 +31,26 @@
   border-radius: 30px;
   font-size: 11px;
   font-weight: 600;
-  color: #8aa0d4;
-  background: #141929;
-  border: 1px solid #1e2a48;
-  transition: background .15s, color .15s;
+  color: #86efac;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.kb__btn:hover { background: #1e2a48; color: #fff; }
+.kb__btn:hover { 
+  background: rgba(16, 185, 129, 0.25); 
+  color: #fff; 
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
 
 .kb__btn.kb__active {
-  background: #3b5bdb;
+  background: linear-gradient(135deg, #10b981, #34d399);
   color: #fff;
-  border-color: #3b5bdb;
-  box-shadow: 0 1px 8px rgba(59,91,219,.4);
+  border-color: #10b981;
+  box-shadow: 0 1px 8px rgba(16,185,129,.4), inset 0 0 15px rgba(255,255,255,0.2);
 }
 
 .kb__frame {
@@ -63,7 +70,7 @@
 .kb__loading {
   padding: 60px 20px;
   text-align: center;
-  color: #6a78a3;
+  color: #6a8a7a;
   font-size: 13px;
 }
 
